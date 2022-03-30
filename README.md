@@ -3,10 +3,11 @@
 This repository contains code for our [EMNLP 2021](https://aclanthology.org/2021.emnlp-main.416/) paper: 
 [Generating Self-Contained and Summary-Centric Question Answer Pairs via Differentiable Reward Imitation Learning](https://arxiv.org/pdf/2109.04689.pdf). Li Zhou, Kevin Small, Yong Zhang, Sandeep Atluri.
 
+## Table of Contents
 - [(SC)^2QA Dataset](#sc2qa-dataset)
   - [Install dependencies](#install-dependencies)
   - [Step 1 Collect Question-Article Pairs](#step-1-collect-question-article-pairs)
-  - [Step 2 Collect {Question, Article, Summary, Length Constraint} 4-Tuples as Training and Validation Set](#step-2-collect-question-article-summary-length-constraint-4-tuples-as-training-and-validation-set)
+  - [Step 2 Collect {Question, Article, Summary, Length Constraint} 4-Tuples](#step-2-collect-question-article-summary-length-constraint-4-tuples-as-training-and-validation-set)
   - [Step 3 Collect Articles as Test Set (Optional)](#step-3-collect-articles-as-test-set-optional)
 - [D-S-DRIL Model](#d-s-dril-model)
   - [Install dependencies](#install-dependencies-1)
