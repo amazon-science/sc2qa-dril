@@ -1,6 +1,6 @@
 transformers==4.4.0
 datasets==1.4.1
-nltk==3.5
+nltk==3.6.6
 warcio==1.7.4
 newspaper3k==0.2.8
 spacy==3.0.0
