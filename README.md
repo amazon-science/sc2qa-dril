@@ -1,7 +1,19 @@
 # Generating Self-Contained and Summary-Centric Question Answer Pairs via Differentiable Reward Imitation Learning
 
-This repository contains code for the following paper: 
-[Generating Self-Contained and Summary-Centric Question Answer Pairs via Differentiable Reward Imitation Learning](https://arxiv.org/pdf/2109.04689.pdf). Li Zhou, Kevin Small, Yong Zhang, Sandeep Atluri. EMNLP 2021.
+This repository contains code for our [EMNLP 2021](https://aclanthology.org/2021.emnlp-main.416/) paper: 
+[Generating Self-Contained and Summary-Centric Question Answer Pairs via Differentiable Reward Imitation Learning](https://arxiv.org/pdf/2109.04689.pdf). Li Zhou, Kevin Small, Yong Zhang, Sandeep Atluri.
+
+- [(SC)^2QA Dataset](#sc2qa-dataset)
+  - [Install dependencies](#install-dependencies)
+  - [Step 1 Collect Question-Article Pairs](#step-1-collect-question-article-pairs)
+  - [Step 2 Collect {Question, Article, Summary, Length Constraint} 4-Tuples as Training and Validation Set](#step-2-collect-question-article-summary-length-constraint-4-tuples-as-training-and-validation-set)
+  - [Step 3 Collect Articles as Test Set (Optional)](#step-3-collect-articles-as-test-set-optional)
+- [D-S-DRIL Model](#d-s-dril-model)
+  - [Install dependencies](#install-dependencies-1)
+  - [Train an Answer Generation Model using DRIL](#train-an-answer-generation-model-using-dril)
+  - [Train a Question Generation Model](#train-a-question-generation-model)
+  - [Inference](#inference)
+- [How to Cite](#how-to-cite)
 
 ## (SC)^2QA Dataset
 We provide code and scripts to construct the public version of (SC)^2QA dataset from [commoncrawl's news data stream](https://commoncrawl.org/2016/10/news-dataset-available/). Compared with the internal version of (SC)^2QA used in our paper, this public version is larger, including 50,441 quesiton-article pairs and 65,332 {question, article, summary, length constraint} 4-tuples. We also provide an even larger question-article pairs dataset with 529,039 pairs.
@@ -27,7 +39,7 @@ We also provide an even larger question-article pairs dataset (without summaries
 from datasets import load_dataset
 sc2q_dataset_large = load_dataset("sc2qa/sc2q_commoncrawl_large")
 ```
-You can skip the remaining of this section if you use this load_dataset API.
+You can skip the remaining of this section if you use the load_dataset API above.
 
 The following are steps to construct the dataset. Appendix A of our paper describes each step in details.
 ### Install dependencies
@@ -95,7 +107,7 @@ bash scripts/inference.sh [validation|test]
 ```
 Inference question and answer pairs of articles in the validation set and test set.
 
-## Reference
+## How to Cite
 If you find this repository useful, please cite the following paper.
 ```
 @inproceedings{zhou-etal-2021-generating,
@@ -103,6 +115,9 @@ If you find this repository useful, please cite the following paper.
     author = "Zhou, Li and Small, Kevin and Zhang, Yong and Atluri, Sandeep",
     booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
     year = "2021",
+    pages = "5103--5135",
     publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.emnlp-main.416",
 }
 ```
+
